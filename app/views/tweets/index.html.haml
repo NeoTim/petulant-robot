@@ -1,0 +1,14 @@
+- @tweets.each do |tweet|
+  %fieldset
+    %div.image{ :style => "float: left; padding: 10px" }
+      = image_tag(tweet["profile_image_url"])
+    %div.text{ :style => "float: left;" }
+      %p
+        = tweet["from_user_name"]
+      %p
+        = "@"
+        = tweet["from_user"]
+      %p
+        = tweet["text"]
+
+    %div.clear{ :style => 'clear: both;' }
