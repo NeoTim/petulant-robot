@@ -4,9 +4,7 @@ class TweetsController < ApplicationController
   require 'json'
 
   def index
-    @response = RestClient.get 'http://search.twitter.com/search.json?q=@desksnearme&rpp=20&include_entities=true&result_type=mixed'
-    @data = JSON.parse(@response)
-    @tweets = @data["results"]
+    @tweets = Tweet.retrieve_and_manipulate_twitter_data
     respond_with @tweets
   end
 end
