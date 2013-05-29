@@ -4,9 +4,7 @@ module PublicApi
 
       ##LIST
       app.get "/api/tweets" do
-        @twitter_json = RestClient.get 'http://search.twitter.com/search.json?q=@desksnearme&rpp=20&include_entities=true&result_type=mixed'
-        @data = JSON.parse(@twitter_json)
-        @tweets = @data["results"].to_json
+        Tweet.retrieve_and_manipulate_twitter_data.to_json
       end
     end
   end
