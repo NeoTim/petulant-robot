@@ -1,12 +1,9 @@
 module PublicApi
   module Tweets
     def self.registered(app)
-
-      ##LIST
       app.get "/api/tweets" do
-        Tweet.retrieve_and_manipulate_twitter_data.to_json
+        Tweet.retrieve_and_manipulate_twitter_data(params['query'] ).to_json
       end
     end
   end
 end
-
