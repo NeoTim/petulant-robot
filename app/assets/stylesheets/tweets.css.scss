@@ -5,3 +5,18 @@
 p {
   margin: 0 0 3px;
 }
+
+.image {
+  float: left; 
+  margin: 20px; 
+  width: 10%;
+}
+
+.text {
+  float: left; 
+  width: 85%;
+}
+
+.clear {
+  clear: both;
+}
