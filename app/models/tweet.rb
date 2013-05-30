@@ -6,8 +6,4 @@ class Tweet < ActiveRecord::Base
     @tweets = @data["results"] 
   end
 
-  #def self.retrieve_tweet_by_id(id)
-    #@response = RestClient.get "https://api.twitter.com/1/statuses/show.json?id=#{id}"
-    #@data = JSON.parse(@response)
-  #end
 end
